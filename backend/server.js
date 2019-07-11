@@ -6,7 +6,7 @@ require('dotenv').config()
 
 const app = new express();
 
-// multer which handles image buffer object, adds req.file to endpoint
+// multer handles image buffer object, adds req.file to endpoint
 var storage = multer.memoryStorage()
 const upload = multer({ storage: storage }).single('file');
 
